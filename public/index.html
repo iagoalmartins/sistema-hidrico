@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Hídrico</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Valor Atual -->
+    <div class="current-value">
+      <h1>Valor Atual</h1>
+      <p id="current-value">0 cm</p>
+    </div>
+
+    <!-- Gráfico e Tabela -->
+    <div class="data-display">
+      <div class="chart-container">
+        <canvas id="data-chart"></canvas>
+      </div>
+      <div class="table-container">
+        <h2>Últimos 10 Dados</h2>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Horário</th>
+              <th>Distância (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
