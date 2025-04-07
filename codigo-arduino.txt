@@ -1,0 +1,21 @@
+#include "Wire.h" 
+#include "Ultrasonic.h"
+
+// Configura os pinos do sensor ultrassônico (Trigger, Echo)
+HC_SR04 sensor1(12, 13);
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Obtém a distância do sensor
+  int distancia = sensor1.distance();
+
+  // Envia os dados no formato JSON
+  Serial.print("{\"distancia\": ");
+  Serial.print(distancia);
+  Serial.println("}");
+
+  delay(1000); // Atualiza a cada 1 segundo
+}
